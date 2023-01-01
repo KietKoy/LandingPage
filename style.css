@@ -28,10 +28,9 @@ body {
     height: 100vh;
 }
 .container {
-    position: relative;
-    background-color: aqua;
+    background-color: #0a0927;
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 .nav-first{
     background-color: darksalmon;
@@ -433,26 +432,37 @@ body {
     font-weight: lighter;
 }
 .content {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     position: relative;
     z-index: 1;
     width: 100%;
 }
-.name-tag img {
+.name-tag {
+    position: relative;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    background: url(./assets/img/foto_aficio.jpeg) no-repeat;
+    background-size: cover;
+}
+.name-tag::after {
+    background-image: url(./assets/img/stripes-right@x2.png);
+    background-size: 781px 643px;
+    right: 0;
+    background-position: 100% 0;
 }
 .name-tag .name-team {
     font-family: barcaExtraBold;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 140px;
+    height: 160px;
     width: 100%;
-    position: absolute;
-    top: -5%;
-    margin-top: 30px;
     font-size: 28px;
-    color: yellow;
+    color: #fdc52c;
     background: rgba(0, 0, 0, .5);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
@@ -461,15 +471,11 @@ body {
     flex-direction: column;
     width: 98%;
     background-color: white;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transform: translateY(-10px);
+    margin: 0 auto;
+    border-radius: 20px;
 }
-.main-background {
+/* .main-background {
     background-color: #181733;
     width: 100%;
     height: 1000px;
@@ -477,7 +483,7 @@ body {
     top: 21%;
     left: 0%;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
+} */
 .title {
     display: flex;
     width: 100%;    
@@ -503,10 +509,11 @@ body {
     font-size: 10px;
 }
 .categories {
-    position: absolute;
+    /* position: absolute;
     left: 50%;
     top: 125px;
-    transform: translateX(-50%);
+    transform: translateX(-50%); */
+    margin: 0 auto;
     font-family: barcaExtraBold;
 }
 .categories ul{
@@ -763,7 +770,7 @@ body {
     flex-wrap: wrap;
 }
 .season {
-    color: yellow;
+    color: #fdc52c;
     font-size: 10px;
 }
 .season b:last-child {
@@ -777,4 +784,144 @@ body {
 }
 .season:not(:last-child) {
     margin-left: 20px;
+}
+.assitant {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 22px;
+    padding: 0 30px;
+}
+.role, .name-assist {
+    width: 50%;
+    margin-right: 1px;
+}
+.assitant ul {
+    list-style: none;
+    width: 100%;
+}
+.role li {
+    background-color: #ededed;
+    font-family: barcaBold;
+}
+.name-assist li {
+    background-color: #f3f3f3;
+    font-family: barcaLight;
+    padding: 11px 0px !important;
+}
+.assitant li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0px;
+    margin-bottom: 5px;
+}
+.achievements-club {
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    height: 200px;
+    background-color: #111025;
+    border: 1px solid #262b47;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+.achievements-club-item {
+    width: 380px;
+    height: 86px;
+    background: url(./assets/img/horizontal-flash@x2.jpg);
+    background-size: contain;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.achievements-club-item span {
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.achievements-club-item span p {
+    color: white;
+    /* margin-right: 20px; */
+    font-size: 12px;
+}
+.achievements-club-item span b {
+    color: #fdc52c;
+    font-size: 65px;
+    font-family: barcaExtraBold;
+}
+.achievements-club-item span svg {
+    width: 32px;
+    height: 64px;
+    fill: #fdc52c;
+    margin: 0px 10px;
+}
+.footer {
+    position: relative;
+}
+.footer-top {
+    width: 100vw;
+    height: 350px;
+    overflow: hidden;
+}
+.footer-top svg {
+    position: relative;
+    width: 200%;
+    height: 100%;
+    opacity: .6;
+    left: -50%;
+}
+.header-name-team {
+    color: white;
+    font-family: barcaBold;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+}
+.footer p {
+    color: #fdc52c;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2%;
+    font-size: 12px;
+}
+.donors {
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    width: 96%;
+    display: flex;
+    justify-content: space-around;
+    transform: translateX(-50%);
+    border-left: 2px solid #fdc52c;
+}
+.donors svg {
+    width: 200px;
+    height: 100px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.line-bottom {
+    width: 100%;
+    height: 4px;
+    background-color: #fdc52c;
+    transform: scale(0);
+    transition: transform 300ms;
+    transition-timing-function: ease-in-out;
+    transform-origin: center;
+}
+.nikes:hover .line-bottom, .spotify:hover .line-bottom {
+    transform: scale(1);
 }
