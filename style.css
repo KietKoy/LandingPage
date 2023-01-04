@@ -23,6 +23,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html {
+    font-size: 62.5%;
+}
 body {
     width: 100vw;
     height: 100vh;
@@ -31,6 +34,92 @@ body {
     background-color: #181733;
     width: 100%;
     height: auto;
+}
+.nav-tablet {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #181733;
+    position: sticky;
+    top: 0;
+    z-index: 12;
+    display: none;
+}
+.nav-tablet-top .fa-bars {
+    font-size: 2rem;
+    margin-left: 5px;
+    color: white;
+}
+.nav-tablet-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0px;
+}
+.culer {
+    display: flex;
+    padding: 8px 10px;
+    background-image: linear-gradient(90deg,#8c1a17,#cd122d);
+    margin-right: 5px;
+    color: white;
+    border-radius: 5px;
+    align-items: center;
+}
+.culer p {
+    font-size: 1.5rem;
+    font-family: barcaBold;
+    margin-left: 3px;
+}
+.name-team-tablet {
+    display: flex;
+    font-size: 1.8rem;
+    font-family: barcaBold;
+    align-items: center;
+    color: white;
+}
+.nav-tablet-bottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg,#cd122d 0,#154284);
+}
+.nav-tablet-bottom ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 8px 0px;
+}
+.nav-tablet-bottom span {
+    display: flex;
+    font-size: 2rem;
+    color: white;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    font-family: barcaLight;
+    font-size: 1.6rem;
+}
+.nav-tablet-bottom li:not(:last-child) {
+    width: 33.34%;
+    padding: 5px 0px;
+}
+.shop{
+    border-right: solid 1px lightgray;
+    border-left: solid 1px lightgray;
+    /* padding: 0 50px; */
+    flex-shrink: 1;
+}
+.nav-tablet-bottom li i{
+    margin: 0 8px;
+}
+.fa-ticket, .fa-shirt, .fa-tv {
+    font-size: 2rem;
+}
+.fa-ticket {
+    transform: rotateZ(-45deg);
 }
 .nav-first{
     background-color: darksalmon;
@@ -41,7 +130,7 @@ body {
     grid-template-rows: 48px 71px;
     grid-template-columns: 329px 1fr 90px;
     position: relative;
-    z-index: 999;
+    z-index: 10;
 }
 .logo {
     grid-area: logo;
@@ -52,7 +141,7 @@ body {
     background-color: #181733;
 }
 .logo h1 {
-    font-size: 30px;
+    font-size: 3rem;
     font-weight:600;
     margin-left: 10px;
     font-family: barcaSemiBold;
@@ -72,12 +161,12 @@ body {
     padding-left: 10px;
 }
 .social-network p {
-    font-size: 10px;
+    font-size: 1rem;
     opacity: 0.5;
     font-family: barcaSemiBold;
 }
 .social-network i {
-    font-size: 20px;
+    font-size: 2rem;
     padding-left: 10px;
     opacity: 0.5;
 }
@@ -96,9 +185,12 @@ body {
 .login a {
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: bold;
     font-family: barcaSemiBold;
+}
+.login i {
+    font-size: 1.6rem;
 }
 .login:hover a {
     border-bottom: thin solid white;
@@ -117,6 +209,7 @@ body {
     padding-left: 5px;
     cursor: pointer;
     font-family: barcaSemiBold;
+    font-size: 1.4rem;
 }
 .language {
     cursor: pointer;
@@ -129,6 +222,7 @@ body {
     justify-content: center;
     margin-left: 10px;
     font-family: barcaLight;
+    font-size: 1.6rem;
 }
 .language .above-background {
     width: 100%;
@@ -139,9 +233,12 @@ body {
     transition: opacity 400ms;
     transition-timing-function: ease-in-out;
 }
+.about {
+    font-size: 1.4rem;
+}
 .fa-caret-down, .fa-arrow-up-right-from-square{
     margin-left: 5px;
-    font-size: 10px;
+    font-size: 1rem;
 }
 .language:hover .above-background {
     opacity: 0.5;
@@ -186,7 +283,7 @@ body {
 .language-item p {
     margin-left: 15px;
     font-weight: lighter;
-    font-size: 13px;
+    font-size: 1.3rem;
     opacity: 0.5;
     padding-bottom: 5px;
 }
@@ -230,6 +327,7 @@ body {
     height: 100%;
     border-bottom: thin solid #29283d;
     border-left: thin solid #29283d;
+    font-size: 1.6rem;
 }
 .nav-mid li:last-child{
     width: 40%;
@@ -279,7 +377,7 @@ body {
     justify-content: unset !important;
     align-items: unset !important;
     font-weight: lighter;
-    font-size: 14px;
+    font-size: 1.4rem;
     padding: 10px;
     border-right: thin solid rgba(211, 211, 211, .3);
 }
@@ -359,7 +457,7 @@ body {
     background-color: #0a0927;
     color: white;
     width: 100vw;
-    height: 265px;
+    /* height: 265px; */
     transform: scale(0);
     transition: transform 200ms;
     transition-timing-function: ease-in-out;
@@ -376,14 +474,14 @@ body {
     justify-content: unset !important;
     align-items: unset !important;
     font-weight: lighter;
-    font-size: 14px;
+    font-size: 1.4rem;
     padding: 10px 0px;
 }
 .sub-drop-down-4 span p {
     margin-top: 10px;
 }
 .sub-drop-down-4 span h2 {
-    color: yellow;
+    color: #fdc52c;
 }
 .barca-teams:hover .drop-down-4 {
     transform: scale(1);
@@ -396,7 +494,7 @@ body {
     top: 0;
     font-family: barcaLight;
     font-size: 13px;
-    z-index: 998;
+    z-index: 9;
     position: -webkit-sticky;/* required */
 }
 .test-a a{
@@ -461,7 +559,7 @@ body {
     justify-content: center;
     height: 160px;
     width: 100%;
-    font-size: 28px;
+    font-size: 2.8rem;
     color: #fdc52c;
     background: rgba(0, 0, 0, .5);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -493,6 +591,7 @@ body {
 }
 .name-title {
     font-family: barcaExtraBold;
+    font-size: 3.2rem;
 }
 .content-partner__logo {
     width: 100px;
@@ -506,7 +605,7 @@ body {
     margin-right: 40px;
     border-right: thin solid black;
     padding-right: 10px;
-    font-size: 10px;
+    font-size: 1rem;
 }
 .categories {
     /* position: absolute;
@@ -526,7 +625,7 @@ body {
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 .categories li b {
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 .categories span {
     display: flex;
@@ -655,7 +754,7 @@ body {
     overflow: hidden;
 }
 .name h1 {
-    font-size: 125px;
+    font-size: 12.5rem;
     font-weight: bold;
     font-style: italic;
     text-transform: uppercase;
@@ -672,7 +771,7 @@ body {
     flex-direction: column;
     position: absolute;
     color: white;
-    font-size: 32px;
+    font-size: 3.2rem;
     text-align: center;
     bottom: 5%;
     transition: bottom;
@@ -694,10 +793,10 @@ body {
     font-family: barcaExtraBold;
 }
 .name_position .full-name {
-    font-size: 40px;
+    font-size: 4rem;
 }
 .posi {
-    font-size: 16px;
+    font-size: 1.6rem;
     opacity: 0.5;
     font-family: barcaExtraBold;
 }
@@ -709,7 +808,7 @@ body {
     position: absolute;
     display: flex;
     flex-direction: column;
-    font-size: 10px;
+    font-size: 1rem;
     color: white;
     bottom: -25%;
     left: 50%;
@@ -727,7 +826,7 @@ body {
     margin-bottom: 10px;
 }
 .sub-achievements b:last-child {
-    font-size: 25px;
+    font-size: 2.5rem;
     font-family: barcaExtraBold;
 }
 .team-person-item:hover .infor {
@@ -761,7 +860,7 @@ body {
     -webkit-text-fill-color: transparent;
     color: #fff;
     font-family: barcaExtraBold;
-    font-size: 18px;
+    font-size: 1.8rem;
 }
 .team-person {
     margin: 0px 30px;
@@ -771,10 +870,10 @@ body {
 }
 .season {
     color: #fdc52c;
-    font-size: 10px;
+    font-size: 1rem;
 }
 .season b:last-child {
-    font-size: 20px;
+    font-size: 2rem;
 }
 .achievements-details, .achievements-season {
     width: 88%;
@@ -789,7 +888,7 @@ body {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    font-size: 22px;
+    font-size: 2.2rem;
     padding: 0 30px;
 }
 .role, .name-assist {
@@ -852,11 +951,11 @@ body {
 .achievements-club-item span p {
     color: white;
     /* margin-right: 20px; */
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 .achievements-club-item span b {
     color: #fdc52c;
-    font-size: 65px;
+    font-size: 6.5rem;
     font-family: barcaExtraBold;
 }
 .achievements-club-item span svg {
@@ -887,7 +986,7 @@ body {
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 40px;
+    font-size: 4rem;
 }
 .footer p {
     color: #fdc52c;
@@ -895,7 +994,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     left: 2%;
-    font-size: 12px;
+    font-size: 1.2rem;
 }
 .donors {
     position: absolute;
@@ -933,7 +1032,7 @@ body {
 }
 .footer-mid-title {
     color: white;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-family: barcaBold;
     margin-bottom: 20px;
 }
@@ -956,13 +1055,13 @@ body {
     color: white;
 }
 .social-media-item i, .onefootbal img{
-    font-size: 32px;
+    font-size: 3.2rem;
     margin-top: 10px;
     margin-left: 10px;
     margin-bottom: 15px;
 }
 .social-media-item p{
-    font-size: 12px;
+    font-size: 1.2rem;
     font-family: barcaBold;
     margin-left: 10px;
 }
@@ -992,7 +1091,7 @@ body {
     color: white;
 }
 .tiktok i {
-    font-size: 25px;
+    font-size: 2.5rem;
     margin-top: 12px;
     margin-bottom: 18px;
 }
@@ -1019,13 +1118,16 @@ body {
 .sitemap-item {
     padding-right: 20px;
 }
+.sitemap-item h4 {
+    font-size: 1.8rem;
+}
 .sitemap-item a {
     text-decoration: none;
     color: hsla(0,0%,100%,.75);
     font-family: barcaLight;
     font-weight: lighter;
-    line-height: 32px;
-    font-size: 14px;
+    line-height: 24px;
+    font-size: 1.4rem;
 }
 .sitemap-item a:hover {
     text-decoration: underline;
@@ -1036,7 +1138,7 @@ body {
     font-family: barcaBold;
     align-items: center;
     margin-left: 20px;
-    font-size: 16px;
+    font-size: 1.6rem;
     margin-bottom: 10px;
 }
 .name-logo img {
@@ -1049,7 +1151,7 @@ body {
     color: white;
     display: flex;
     margin-left: 15px;
-    font-size: 12px;
+    font-size: 1.2rem;
     width: 100%;
     justify-content: space-between;
     padding: 10px;
@@ -1076,4 +1178,67 @@ body {
     color: hsla(0,0%,100%,.75);
     font-family: barcaLight;
     font-weight: lighter;
+}
+@media screen and (max-width: 1219px) {
+    /* .nav-first {
+        display: none;
+    } */
+    .nav-mid li {
+        font-size: 1.2rem;
+    }
+    .nav-first {
+        grid-template-rows: 48px 60px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .nav-first {
+        grid-template-rows: 48px 55px;
+    }
+    .social-network p {
+        display: none;
+    }
+    .social-network i {
+        font-size: 1.5rem;
+    }
+    .re-1100px {
+        display: block !important;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .nav-first {
+        grid-template-areas: 
+        "logo inf inf"
+        "nav-mid nav-mid nav-mid";
+        grid-template-rows: 48px 55px;
+        grid-template-columns: 200px 1fr 90px;
+    }
+    .logo {
+        border: 1px solid #29283d;
+    }
+    .logo h1{
+        font-size: 1.8rem;
+    }
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+}
+@media screen and (max-width: 840px) {
+    .nav-first, .nav-second {
+        display: none;
+    }
+    .nav-tablet {
+        display: block;
+    }
+}
+@media screen and (max-width: 562px){
+    .name-team-tablet{
+        font-size: 1.6rem;
+    }
+    .nav-tablet-bottom p{
+        font-size: 1rem;
+    }
+    .nav-tablet-bottom i {
+        font-size: 1.2rem !important;
+    }
 }
