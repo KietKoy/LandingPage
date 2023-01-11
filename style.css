@@ -51,10 +51,174 @@ body {
     color: white;
 }
 .nav-tablet-top {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 5px 0px;
+}
+.nav-mobile {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: #181733;
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: all 300ms ease-in-out;
+}
+.input-search-container {
+    width: 100%;
+}
+.input-search-container #input-search-mobile {
+    margin-top: 10px;
+    width: 75%;
+    height: 45px;
+    background-color: hsla(0,0%,100%,.1);
+    border: .1rem solid hsla(0,0%,100%,.1);
+    border-radius: 50px;
+    margin-left: 10px;
+    padding-left: 40px;
+    color: white;
+    font-family: barcaBold;
+    outline: none;
+}
+.input-search-container #input-search-mobile::placeholder {
+    font-size: 1.4rem;
+    font-family: barcaLight;
+    font-style: italic;
+    color: hsla(0,0%,100%,.5);
+    font-weight: lighter;
+    position: absolute;
+    top: 12px;
+    left: 40px;
+}
+.input-search-container i {
+    color: hsla(0,0%,100%,.5);
+    font-size: 2rem;
+    position: absolute;
+    top: 22px;
+    left: 22px;
+}
+.button-exit-nav-mobile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.4rem;
+    font-family: barcaBold;
+    padding: 8px 20px;
+}
+.button-exit-nav-mobile .fa-xmark {
+    font-size: 2.6rem;
+}
+.nav-core {
+    height: 87%;
+    position: relative;
+}
+.nav-mobile-first {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 20px);
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.nav-mobile-first ul {
+    width: 100%;
+    background-color: transparent;
+    color: hsla(0,0%,100%,.6);
+    font-size: 1.4rem;
+    font-family: barcaBold;
+    list-style: none;
+}
+.nav-mobile-first-top ul li {
+    width: 95%;
+    font-weight: lighter;
+    padding: 10px 20px;
+    border-bottom: 1px solid hsla(0,0%,100%,.2);
+}
+.nav-mobile-first-top ul li:nth-child(2) {
+    background: linear-gradient(90deg, rgb(44, 68, 129), rgb(24, 23, 51)) !important;
+    border-left: solid 5px #fdc52c;
+    color: white;
+}
+.nav-mobile-first-top ul li span {
+    display: flex;
+    align-items: center;
+}
+.nav-mobile-first-top .icon {
+    height: 1.8rem;
+    fill: hsla(0,0%,100%,.6);
+}
+.nav-mobile-first-bottom ul li{
+    padding: 5px 20px;
+    font-family: barcaLight;
+    color: white;
+}
+.nav-mobile-second {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: calc(100% - 20px);
+    display: flex;
+    align-items: center;
+    overflow-y: scroll;
+}
+.nav-mobile-second ul {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    list-style: none;
+    height: 97%;
+    width: 100%;
+    background: linear-gradient(rgb(205, 18, 45) 0px, rgb(21, 66, 132));
+    overflow: hidden;
+}
+.nav-mobile-second ul li {
+    width: 100%;
+    padding: 17px 10px;
+    border-bottom: 1px solid hsla(0,0%,100%,.2);
+    font-size: 1.2rem;
+    color: white;
+    font-family: barcaLight;
+    font-weight: 100;
+}
+.nav-mobile-second ul li:first-child {
+    background-color: rgb(119, 17, 30);
+    font-family: barcaBold;
+    font-size: 1.4rem;
+}
+.nav-mobile-second ul li:nth-child(7) {
+    font-family: barcaBold;
+    border-left: 4px solid #fdc52c;
+}
+.language-options-mobile {
+    height: auto;
+    /* height: auto; */
+    width: 100%;
+    color: white;
+    /* background-color: #0a0927; */
+    background-color: red;
+    border-top: .1rem solid hsla(0,0%,100%,.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+.language-options-mobile span {
+    display: flex;
+    padding: 10px 10px;
+    font-size: 1.4rem;
+    justify-content: center;
+    align-items: center;
+    font-family: barcaRegular;
+}
+.language-options-mobile .fa-caret-down {
+    transform: rotateX(180deg);
 }
 .culer {
     display: flex;
@@ -64,11 +228,58 @@ body {
     color: white;
     border-radius: 5px;
     align-items: center;
+    cursor: pointer;
 }
 .culer p {
     font-size: 1.5rem;
     font-family: barcaBold;
     margin-left: 3px;
+}
+.user-options {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    transform: translateX(100%) scale(0);
+    transform-origin: right;
+    transition: all 300ms ease-in-out;
+}
+.btn-register .icon{
+    width: 16px;
+    height: 16px;
+    fill: white;
+}
+.btn-login , .btn-register, .btn-exit-user-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.btn-login {
+    flex: 4;
+    background-color: #181733;
+    color: white;
+    font-size: 1.6rem;
+}
+.btn-login p, .btn-register p {
+    margin-left: 5px;
+    font-family: barcaBold;
+}
+.btn-register {
+    flex: 5;
+    color: white;
+    font-size: 1.6rem;
+    background: linear-gradient(90deg,#8c1a17,#cd122d);
+}
+.btn-exit-user-options {
+    display: flex;
+}
+.btn-exit-user-options {
+    flex: .5;
+    color: white;
+    font-size: 2.6rem;
+    background: #cd122d;
 }
 .name-team-tablet {
     display: flex;
@@ -254,7 +465,7 @@ body {
     color: black;
     padding:10px 0px;
     transform: scale(0);
-    transition: transform 300ms;
+    transition: transform 200ms;
     transition-timing-function: ease-in-out;
     transform-origin: top right;
 }
@@ -329,6 +540,74 @@ body {
     border-left: thin solid #29283d;
     font-size: 1.6rem;
 }
+.search {
+    position: relative;
+}
+.search i {
+    font-size: 2.6rem;
+    position: absolute;
+    transition: opacity 200ms linear;
+}
+.search .fa-xmark {
+    opacity: 0;
+}
+.form-search {
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 90px;
+    background-color: white;
+    right: 0;
+    bottom: -90px;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 500ms ease-in-out, opacity 200ms ease-in-out;
+}
+.js-icon-search {
+    color: black !important;
+    font-size: 3.6rem !important;
+    position: static !important;
+    transition: opacity 1s ease-in-out !important;
+}
+#input-search {
+    margin: 0 20px;
+    width: 500px;
+    height: 50px;
+    border: none;
+    outline: none;
+    font-size: 1.6rem;
+    font-family: barcaRegular;
+    font-style: italic;
+    color: hsla(0,0%,45%,.7);
+}
+.btn-search {
+    border: thin solid hsla(0,0%,45%,.7);
+    width: 100px !important;
+    height: 35px !important;
+    color: black;
+    font-size: 1rem !important;
+    border-radius: 20px;
+    position: static;
+}
+.btn-search:hover {
+    background-color: #154284;
+    color: white;
+    transition: 200ms;
+}
+.first-team {
+    position: relative;
+}
+.first-team::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4.5px;
+    background-color: #fdc52c;
+}
 .nav-mid li:last-child{
     width: 40%;
     border-left: thin solid rgb(41, 40, 61);
@@ -352,6 +631,7 @@ body {
     transform: scale(0);
     transition: transform 200ms;
     transition-timing-function: ease-in-out;
+    z-index: 100;
 }
 .drop-down-1::before {
     content: '';
@@ -394,6 +674,7 @@ body {
     transition: transform 200ms;
     transition-timing-function: ease-in-out;
     padding: 10px 0px;
+    z-index: 100;
 }
 .barca-tv:hover .drop-down-2{
     transform: scale(1);
@@ -433,6 +714,7 @@ body {
     transition: transform 200ms;
     transition-timing-function: ease-in-out;
     padding: 10px 0px;
+    z-index: 100;
 }
 .drop-down-3::before {
     content: '';
@@ -452,7 +734,7 @@ body {
 }
 .drop-down-4 {
     position: absolute;
-    top: 100%;
+    top: 99%;
     left: 0;
     background-color: #0a0927;
     color: white;
@@ -461,6 +743,7 @@ body {
     transform: scale(0);
     transition: transform 200ms;
     transition-timing-function: ease-in-out;
+    z-index: 100;
 }
 .sub-drop-down-4 {
     display: flex;
@@ -519,10 +802,30 @@ body {
     align-items: center;
     padding: 0px 10px;
     margin: 0 10px;
-}
-.nav-bottom ul li:hover {
+    position: relative;
     cursor: pointer;
-    border-bottom: 3px solid white;
+}
+.nav-bottom ul li::before {
+    content: '';
+    width: 100%;
+    height: 0px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: height .1s ease-in;
+}
+.nav-bottom ul li:nth-child(6)::before {
+    content: '';
+    width: 100%;
+    height: 3.5px;
+    background-color: #fdc52c;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.nav-bottom ul li:hover::before{
+    height: 3.5px;
 }
 .nav-bottom a {
     text-decoration: none;
@@ -542,9 +845,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 160px;
     background: url(./assets/img/foto_aficio.jpeg) no-repeat;
     background-size: cover;
+}
+.name-team {
+    padding: 32px 0px;
+    transform: translateY(-10%);
 }
 .name-tag::after {
     background-image: url(./assets/img/stripes-right@x2.png);
@@ -557,7 +863,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 160px;
     width: 100%;
     font-size: 2.8rem;
     color: #fdc52c;
@@ -594,8 +899,8 @@ body {
     font-size: 3.2rem;
 }
 .content-partner__logo {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
 }
 .partner {
     display: flex;
@@ -606,23 +911,28 @@ body {
     border-right: thin solid black;
     padding-right: 10px;
     font-size: 1rem;
+    color: hsla(0,0%,45%,.7);
+    font-family: barcaBold;
 }
 .categories {
     /* position: absolute;
     left: 50%;
     top: 125px;
     transform: translateX(-50%); */
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     font-family: barcaExtraBold;
 }
 .categories ul{
     display: flex;
     list-style: none;
+    background-color: #f8f8f8;
 }
 .categories li {
     margin-left: 10px;
     padding: 0 10px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .categories li b {
     font-size: 1.2rem;
@@ -630,7 +940,9 @@ body {
 .categories span {
     display: flex;
     align-items: center;
-    padding: 5px 10px;
+    justify-content: center;
+    width: 90px;
+    height: 30px;
 }
 .categories li:hover {
     cursor: pointer;
@@ -641,9 +953,9 @@ body {
 .team-person-item {
     cursor: pointer;
     position: relative;
-    width: 450px;
-    height: 450px;
-    margin-right: 10px;
+    width: 32.33%;
+    aspect-ratio : 1 / 1;
+    margin-right: 5px;
     margin-bottom: 10px;
 }
 .Stegen {
@@ -808,6 +1120,7 @@ body {
     position: absolute;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     font-size: 1rem;
     color: white;
     bottom: -25%;
@@ -817,13 +1130,19 @@ body {
     transition: bottom, opacity;
     transition-duration: 400ms;
     transition-timing-function: ease-in-out;
+    gap: 0 10px;
+}
+.achievements ul {
+    list-style: none;
+    display: flex;
 }
 .sub-achievements {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 10px;
-    margin-bottom: 10px;
+    /* padding: 0 10px;
+    margin-bottom: 10px; */
 }
 .sub-achievements b:last-child {
     font-size: 2.5rem;
@@ -836,7 +1155,7 @@ body {
     bottom: 5%;
 }
 .team-person-item:hover .achievements {
-    bottom: -2%;
+    bottom: 0%;
     opacity: 1;
 }
 .team-person-item:hover .infor_xavi {
@@ -846,6 +1165,7 @@ body {
     bottom: 0;
 }
 .position {
+    width: 100%;
     padding-top: 40px;
     display: flex;
     flex-direction: column;
@@ -867,6 +1187,8 @@ body {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    /* display: grid;
+    grid-template-columns: repeat(3, 100%); */
 }
 .season {
     color: #fdc52c;
@@ -881,9 +1203,9 @@ body {
     display: flex;
     justify-content: space-evenly;
 }
-.season:not(:last-child) {
+/* .season:not(:last-child) {
     margin-left: 20px;
-}
+} */
 .assitant {
     display: flex;
     width: 100%;
@@ -892,27 +1214,31 @@ body {
     padding: 0 30px;
 }
 .role, .name-assist {
-    width: 50%;
+    width: 100%;
     margin-right: 1px;
 }
 .assitant ul {
     list-style: none;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .role li {
-    background-color: #ededed;
-    font-family: barcaBold;
-}
-.name-assist li {
+    width: 50%;
     background-color: #f3f3f3;
     font-family: barcaLight;
-    padding: 11px 0px !important;
+    text-align: center;
+}
+.name-role {
+    background-color: #ededed;
+    font-family: barcaBold !important;
 }
 .assitant li {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 49.9%;
     padding: 10px 0px;
     margin-bottom: 5px;
 }
@@ -945,8 +1271,10 @@ body {
     background-color: black;
     position: relative;
     display: flex;
-    align-items: center;
+    background-image: url(./assets/img/horizontal-flash-mobile@x2.jpg);
+    background-size: cover;
     justify-content: center;
+    align-items: center;
 }
 .achievements-club-item span p {
     color: white;
@@ -1029,6 +1357,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 .footer-mid-title {
     color: white;
@@ -1037,6 +1366,7 @@ body {
     margin-bottom: 20px;
 }
 .social-media {
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -1189,6 +1519,30 @@ body {
     .nav-first {
         grid-template-rows: 48px 60px;
     }
+    .achievements-club {
+        flex-wrap: wrap;
+        height: 250px;
+        justify-content: space-evenly;
+    }
+    .achievements-club-item {
+        width: 45%;
+        margin: 20px 0px;
+    }
+    .name_position .full-name {
+        font-size: 2.6rem;
+    }
+    .name h1 {
+        font-size: 8rem;
+    }
+    .sub-achievements {
+        font-size: .6rem;
+    }
+    .team-person-item:hover .name_position {
+        bottom: 0%;
+    }
+    .team-person-item:hover .infor {
+        bottom: 35%;
+    }
 }
 @media screen and (max-width: 1100px) {
     .nav-first {
@@ -1202,6 +1556,12 @@ body {
     }
     .re-1100px {
         display: block !important;
+    }
+    .sub-1-drop-down-1 span, .sub-2-drop-down-1 span, .sub-drop-down-2 span, .sub-drop-down-2 span, .sub-1-drop-down-3 span, .sub-2-drop-down-3 span, .sub-drop-down-4 span {
+        font-size: 1rem;
+    }
+    .sub-achievements b:last-child {
+        font-size: 2rem;
     }
 }
 @media screen and (max-width: 1024px) {
@@ -1223,12 +1583,202 @@ body {
         height: 30px;
     }
 }
+@media screen and (max-width: 1000px) {
+    .achievements-season {
+        display: none;
+    }
+    .sub-achievements {
+        justify-content: flex-end;
+    }
+    .sub-achievements b:first-child {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .team-person-item:hover .infor {
+        bottom: 30%;
+    }
+}
 @media screen and (max-width: 840px) {
     .nav-first, .nav-second {
         display: none;
     }
     .nav-tablet {
         display: block;
+    }
+    .name-team h1{
+        font-size: 4rem !important;
+    }
+    .name-title {
+        font-size: 1.8rem;
+    }
+    .partner {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .partner svg {
+        width: 42px;
+        height: 42px;
+    }
+    .partner p {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+    .achievements-club {
+        height: 186px;
+        justify-content: space-between;
+        padding: 0;
+        overflow: hidden;
+    }
+    .achievements-club-item {
+        width: 24%;
+        height: 100%;
+        margin: 0px;
+        background-size: auto;
+    }
+    .achievements-club-item span{
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .achievements-club-item span p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+    .achievements-club-item span b {
+        font-size: 4rem;
+        padding: 0;
+        margin: 0px;
+        margin-left: 10px;
+    }
+    .achievements-club-item span svg {
+        width: 24px !important;
+        height: 48px !important;
+        margin: 0;
+    }
+    .footer-top svg {
+        height: 50%;
+    }
+    .header-name-team {
+        top: 15%;
+        font-size: 3rem;
+    }
+    .nikes svg {
+        width: 125px;
+        height: 75px;
+    }
+    .donors {
+        border: none;
+    }
+    .spotify svg {
+        width: 150px;
+        height: 75px;
+    }
+    .footer p {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .header-titlte-footer-top {
+        display: flex;
+        position: relative;
+        align-items: center;
+        margin: 0 10px;
+    }
+    .header-titlte-footer-top::after {
+        content: '';
+        height: 2px;
+        width: 40%;
+        position: absolute;
+        left: 0;
+        background-color: #fdc52c;
+    }
+    .header-titlte-footer-top::before {
+        content: '';
+        height: 2px;
+        width: 40%;
+        position: absolute;
+        right: 0;
+        background-color: #fdc52c;
+    }
+    .footer-mid-title {
+        font-size: 1.8rem;
+    }
+    .social-media {
+        flex-wrap: wrap;
+    }
+    .social-media-item {
+        width: 30%;
+        margin-bottom: 10px;
+    }
+    .footer-bottom {
+        margin-top: 50px;
+    }
+    .sitemap {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+    }
+    .name-logo h1{
+        font-size: 2.6rem;
+    }
+    .footer-corporate-link ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .footer-corporate-link ul li {
+        border: none !important;
+        margin-bottom: 5px;
+    }
+    .footer-corporate-link {
+        flex-direction: column;
+    }
+    .achievements-club-item span p {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 700px) {
+    .name-team h1 {
+        font-size: 3rem !important;
+    }
+    .categories ul{
+        overflow: scroll;
+    }
+}
+@media screen and (max-width: 600px) {
+    .team-person {
+        margin: 0 5px;
+    }
+    .team-person-item {
+        width: 48%;
+        aspect-ratio : 1 / 1;
+        margin: 2.5px 2.5px;
+    }
+}
+@media screen and (max-width: 640px) {
+    .sitemap {
+        grid-template-columns: repeat(2, 50%);
+    }
+    .sitemap-item h4 {
+        margin-bottom: 15px;
+    }
+    .sitemap-item li {
+        margin: 0;
+    }
+    .footer-corporate {
+        margin-top: 30px;
+    }
+    .footer-corporate-link p {
+        font-size: 1remh;
+    }
+    .name-position h1 {
+        font-size: 2.6rem;
+    }
+    .name_position .posi {
+        font-size: 1rem;
+    }
+    .assitant {
+        font-size: 1.6rem;
     }
 }
 @media screen and (max-width: 562px){
@@ -1240,5 +1790,41 @@ body {
     }
     .nav-tablet-bottom i {
         font-size: 1.2rem !important;
+    }
+    .header-titlte-footer-top::after {
+        width: 35%;
+    }
+    .header-titlte-footer-top::before {
+        width: 35%;
+    }
+}
+@media screen and (max-width: 500px){
+    
+}
+@media screen and (max-width: 480px){
+    .assitant {
+        margin-top: 50px;
+    }
+    .assitant li {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 440px){
+    .social-media-item {
+        width: 45%;
+    }
+    .header-name-team {
+        font-size: 2.6rem;
+        top: 18%;
+    }
+}
+@media screen and (max-width: 400px){
+    .team-person {
+        justify-content: center;
+    }
+    .team-person-item {
+        width: 99%;
+        aspect-ratio : 1 / 1;
+        margin: 2.5px 2.5px;
     }
 }
