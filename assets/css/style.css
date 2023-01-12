@@ -1,22 +1,22 @@
 @font-face {
     font-family: barcaBold;
-    src: url(./assets/font/FC_BARCELONA-Bold.woff2);
+    src: url(../font/FC_BARCELONA-Bold.woff2);
 }
 @font-face {
     font-family: barcaExtraBold;
-    src: url(./assets/font/FC_BARCELONA-Extrabold.woff2);
+    src: url(../font/FC_BARCELONA-Extrabold.woff2);
 }
 @font-face {
     font-family: barcaLight;
-    src: url(./assets/font/FC_BARCELONA-Light.woff2);
+    src: url(../font/FC_BARCELONA-Light.woff2);
 }
 @font-face {
     font-family: barcaRegular;
-    src: url(./assets/font/FC_BARCELONA-Regular.woff2);
+    src: url(../font/FC_BARCELONA-Regular.woff2);
 }
 @font-face {
     font-family: barcaSemiBold;
-    src: url(./assets/font/FC_BARCELONA-Semibold.woff2);
+    src: url(../font/FC_BARCELONA-Semibold.woff2);
 }
 * {
     margin: 0;
@@ -916,7 +916,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(./assets/img/foto_aficio.jpeg) no-repeat;
+    background: url(../img/foto_aficio.jpeg) no-repeat;
     background-size: cover;
 }
 .name-team {
@@ -924,7 +924,7 @@ body {
     transform: translateY(-10%);
 }
 .name-tag::after {
-    background-image: url(./assets/img/stripes-right@x2.png);
+    background-image: url(../img/stripes-right@x2.png);
     background-size: 781px 643px;
     right: 0;
     background-position: 100% 0;
@@ -949,15 +949,6 @@ body {
     margin: 0 auto;
     border-radius: 20px;
 }
-/* .main-background {
-    background-color: #181733;
-    width: 100%;
-    height: 1000px;
-    position: absolute;
-    top: 21%;
-    left: 0%;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-} */
 .title {
     display: flex;
     width: 100%;    
@@ -986,10 +977,6 @@ body {
     font-family: barcaBold;
 }
 .categories {
-    /* position: absolute;
-    left: 50%;
-    top: 125px;
-    transform: translateX(-50%); */
     display: flex;
     justify-content: center;
     width: 100%;
@@ -1030,91 +1017,91 @@ body {
     margin-bottom: 10px;
 }
 .Stegen {
-    background: url(./assets/img/01-MARC-ANDRE_TER_STEGEN.jpg);
+    background: url(../img/01-MARC-ANDRE_TER_STEGEN.jpg);
     background-size: contain;
 }
 .Pena {
-    background: url(./assets/img/26-INAKI_PENA.jpg);
+    background: url(../img/26-INAKI_PENA.jpg);
     background-size: contain;
 }
 .Bellerin {
-    background: url(./assets/img/02-HECTOR_BELLERIN_.jpg);
+    background: url(../img/02-HECTOR_BELLERIN_.jpg);
     background-size: contain;
 }
 .Araujo {
-    background: url(./assets/img/04-RONALD_ARAUJO_.jpg);
+    background: url(../img/04-RONALD_ARAUJO_.jpg);
     background-size: contain;
 }
 .Christensen {
-    background: url(./assets/img/15-ANDREAS_CHRISTENSEN.jpg);
+    background: url(../img/15-ANDREAS_CHRISTENSEN.jpg);
     background-size: contain;
 }
 .Alonso {
-    background: url(./assets/img/17-MARCOS_ALONSO.jpg);
+    background: url(../img/17-MARCOS_ALONSO.jpg);
     background-size: contain;
 }
 .Alba {
-    background: url(./assets/img/18-JORDI_ALBA.jpg);
+    background: url(../img/18-JORDI_ALBA.jpg);
     background-size: contain;
 }
 .Kounde {
-    background: url(./assets/img/23-JULES_KOUNDE.jpg);
+    background: url(../img/23-JULES_KOUNDE.jpg);
     background-size: contain;
 }
 .Garcia {
-    background: url(./assets/img/24-ERIC_GARCIA.jpg);
+    background: url(../img/24-ERIC_GARCIA.jpg);
     background-size: contain;
 }
 .Busquets {
-    background: url(./assets/img/05-SERGIO_BUSQUETS.jpg);
+    background: url(../img/05-SERGIO_BUSQUETS.jpg);
     background-size: contain;
 }
 .Pedri {
-    background: url(./assets/img/08-PEDRI.jpg);
+    background: url(../img/08-PEDRI.jpg);
     background-size: contain;
 }
 .Kessie {
-    background: url(./assets/img/19-FRANCK_KESSIE.jpg);
+    background: url(../img/19-FRANCK_KESSIE.jpg);
     background-size: contain;
 }
 .Roberto {
-    background: url(./assets/img/20-S_ROBERTO.jpg);
+    background: url(../img/20-S_ROBERTO.jpg);
     background-size: contain;
 }
 .Jong {
-    background: url(./assets/img/21-FRENKIE_DE_JONG.jpg);
+    background: url(../img/21-FRENKIE_DE_JONG.jpg);
     background-size: contain;
 }
 .Gavi {
-    background: url(./assets/img/30-GAVI_.jpg);
+    background: url(../img/30-GAVI_.jpg);
     background-size: contain;
 }
 .Dembele {
-    background: url(./assets/img/07-OUSMANE_DEMBELE.jpg);
+    background: url(../img/07-OUSMANE_DEMBELE.jpg);
     background-size: contain;
 }
 .Lewandowski {
-    background: url(./assets/img/09-ROBERT_LEWANDOWSKI.jpg);
+    background: url(../img/09-ROBERT_LEWANDOWSKI.jpg);
     background-size: contain;
 }
 .Fati {
-    background: url(./assets/img/10-ANSU_FATI.jpg);
+    background: url(../img/10-ANSU_FATI.jpg);
     background-size: contain;
 }
 .Torres {
-    background: url(./assets/img/11-FERRAN_TORRES.jpg);
+    background: url(../img/11-FERRAN_TORRES.jpg);
     background-size: contain;
 }
 .Depay {
-    background: url(./assets/img/14-MEMPHIS_DEPAY.jpg);
+    background: url(../img/14-MEMPHIS_DEPAY.jpg);
     background-size: contain;
 }
 .Raphinha {
-    background: url(./assets/img/22-RAPHINHA.jpg);
+    background: url(../img/22-RAPHINHA.jpg);
     background-size: contain;
 }
 .Xavi {
-    background: url(./assets/img/00_XAVI_HERNANDEZ.jpg);
+    background: url(../img/00_XAVI_HERNANDEZ.jpg);
     background-size: contain;
 }
 .above-background-linear {
@@ -1329,7 +1316,7 @@ body {
 .achievements-club-item {
     width: 380px;
     height: 86px;
-    background: url(./assets/img/horizontal-flash@x2.jpg);
+    background: url(../img/horizontal-flash@x2.jpg);
     background-size: contain;
     margin: 0 10px;
     display: flex;
@@ -1342,7 +1329,7 @@ body {
     background-color: black;
     position: relative;
     display: flex;
-    background-image: url(./assets/img/horizontal-flash-mobile@x2.jpg);
+    background-image: url(../img/horizontal-flash-mobile@x2.jpg);
     background-size: cover;
     justify-content: center;
     align-items: center;
@@ -1579,323 +1566,4 @@ body {
     color: hsla(0,0%,100%,.75);
     font-family: barcaLight;
     font-weight: lighter;
-}
-@media screen and (max-width: 1219px) {
-    /* .nav-first {
-        display: none;
-    } */
-    .nav-mid li {
-        font-size: 1.2rem;
-    }
-    .nav-first {
-        grid-template-rows: 48px 60px;
-    }
-    .achievements-club {
-        flex-wrap: wrap;
-        height: 250px;
-        justify-content: space-evenly;
-    }
-    .achievements-club-item {
-        width: 45%;
-        margin: 20px 0px;
-    }
-    .name_position .full-name {
-        font-size: 2.6rem;
-    }
-    .name h1 {
-        font-size: 8rem;
-    }
-    .sub-achievements {
-        font-size: .6rem;
-    }
-    .team-person-item:hover .name_position {
-        bottom: 0%;
-    }
-    .team-person-item:hover .infor {
-        bottom: 35%;
-    }
-}
-@media screen and (max-width: 1100px) {
-    .nav-first {
-        grid-template-rows: 48px 55px;
-    }
-    .social-network p {
-        display: none;
-    }
-    .social-network i {
-        font-size: 1.5rem;
-    }
-    .re-1100px {
-        display: block !important;
-    }
-    .sub-1-drop-down-1 span, .sub-2-drop-down-1 span, .sub-drop-down-2 span, .sub-drop-down-2 span, .sub-1-drop-down-3 span, .sub-2-drop-down-3 span, .sub-drop-down-4 span {
-        font-size: 1rem;
-    }
-    .sub-achievements b:last-child {
-        font-size: 2rem;
-    }
-}
-@media screen and (max-width: 1024px) {
-    .nav-first {
-        grid-template-areas: 
-        "logo inf inf"
-        "nav-mid nav-mid nav-mid";
-        grid-template-rows: 48px 55px;
-        grid-template-columns: 200px 1fr 90px;
-    }
-    .logo {
-        border: 1px solid #29283d;
-    }
-    .logo h1{
-        font-size: 1.8rem;
-    }
-    .logo img {
-        width: 30px;
-        height: 30px;
-    }
-}
-@media screen and (max-width: 1000px) {
-    .achievements-season {
-        display: none;
-    }
-    .sub-achievements {
-        justify-content: flex-end;
-    }
-    .sub-achievements b:first-child {
-        font-size: 1rem;
-        text-align: center;
-    }
-    .team-person-item:hover .infor {
-        bottom: 30%;
-    }
-}
-@media screen and (max-width: 840px) {
-    .nav-first, .nav-second {
-        display: none;
-    }
-    .nav-tablet {
-        display: block;
-    }
-    .name-team h1{
-        font-size: 4rem !important;
-    }
-    .name-title {
-        font-size: 1.8rem;
-    }
-    .partner {
-        flex-direction: column;
-        justify-content: center;
-    }
-    .partner svg {
-        width: 42px;
-        height: 42px;
-    }
-    .partner p {
-        border: none;
-        padding: 0;
-        margin: 0;
-    }
-    .achievements-club {
-        height: 186px;
-        justify-content: space-between;
-        padding: 0;
-        overflow: hidden;
-    }
-    .achievements-club-item {
-        width: 24%;
-        height: 100%;
-        margin: 0px;
-        background-size: auto;
-    }
-    .achievements-club-item span{
-        flex-direction: column;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-    .achievements-club-item span p {
-        font-size: 1rem;
-        margin-bottom: 10px;
-    }
-    .achievements-club-item span b {
-        font-size: 4rem;
-        padding: 0;
-        margin: 0px;
-        margin-left: 10px;
-    }
-    .achievements-club-item span svg {
-        width: 24px !important;
-        height: 48px !important;
-        margin: 0;
-    }
-    .footer-top svg {
-        height: 50%;
-    }
-    .header-name-team {
-        top: 15%;
-        font-size: 3rem;
-    }
-    .nikes svg {
-        width: 125px;
-        height: 75px;
-    }
-    .donors {
-        border: none;
-    }
-    .spotify svg {
-        width: 150px;
-        height: 75px;
-    }
-    .footer p {
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    .header-titlte-footer-top {
-        display: flex;
-        position: relative;
-        align-items: center;
-        margin: 0 10px;
-    }
-    .header-titlte-footer-top::after {
-        content: '';
-        height: 2px;
-        width: 40%;
-        position: absolute;
-        left: 0;
-        background-color: #fdc52c;
-    }
-    .header-titlte-footer-top::before {
-        content: '';
-        height: 2px;
-        width: 40%;
-        position: absolute;
-        right: 0;
-        background-color: #fdc52c;
-    }
-    .footer-mid-title {
-        font-size: 1.8rem;
-    }
-    .social-media {
-        flex-wrap: wrap;
-    }
-    .social-media-item {
-        width: 30%;
-        margin-bottom: 10px;
-    }
-    .footer-bottom {
-        margin-top: 50px;
-    }
-    .sitemap {
-        display: grid;
-        grid-template-columns: repeat(4, 25%);
-    }
-    .name-logo h1{
-        font-size: 2.6rem;
-    }
-    .footer-corporate-link ul {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-    .footer-corporate-link ul li {
-        border: none !important;
-        margin-bottom: 5px;
-    }
-    .footer-corporate-link {
-        flex-direction: column;
-    }
-    .achievements-club-item span p {
-        text-align: center;
-    }
-}
-@media screen and (max-width: 700px) {
-    .name-team h1 {
-        font-size: 3rem !important;
-    }
-    .categories ul{
-        overflow: scroll;
-    }
-}
-@media screen and (max-width: 600px) {
-    .team-person {
-        margin: 0 5px;
-    }
-    .team-person-item {
-        width: 48%;
-        aspect-ratio : 1 / 1;
-        margin: 2.5px 2.5px;
-    }
-}
-@media screen and (max-width: 640px) {
-    .sitemap {
-        grid-template-columns: repeat(2, 50%);
-    }
-    .sitemap-item h4 {
-        margin-bottom: 15px;
-    }
-    .sitemap-item li {
-        margin: 0;
-    }
-    .footer-corporate {
-        margin-top: 30px;
-    }
-    .footer-corporate-link p {
-        font-size: 1remh;
-    }
-    .name-position h1 {
-        font-size: 2.6rem;
-    }
-    .name_position .posi {
-        font-size: 1rem;
-    }
-    .assitant {
-        font-size: 1.6rem;
-    }
-}
-@media screen and (max-width: 562px){
-    .name-team-tablet{
-        font-size: 1.6rem;
-    }
-    .nav-tablet-bottom p{
-        font-size: 1rem;
-    }
-    .nav-tablet-bottom i {
-        font-size: 1.2rem !important;
-    }
-    .header-titlte-footer-top::after {
-        width: 35%;
-    }
-    .header-titlte-footer-top::before {
-        width: 35%;
-    }
-}
-@media screen and (max-width: 500px){
-    
-}
-@media screen and (max-width: 480px){
-    .assitant {
-        margin-top: 50px;
-    }
-    .assitant li {
-        width: 100%;
-    }
-}
-@media screen and (max-width: 440px){
-    .social-media-item {
-        width: 45%;
-    }
-    .header-name-team {
-        font-size: 2.6rem;
-        top: 18%;
-    }
-}
-@media screen and (max-width: 400px){
-    .team-person {
-        justify-content: center;
-    }
-    .team-person-item {
-        width: 99%;
-        aspect-ratio : 1 / 1;
-        margin: 2.5px 2.5px;
-    }
 }
