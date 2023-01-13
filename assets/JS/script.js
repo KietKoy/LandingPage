@@ -5,18 +5,22 @@ btnDisplaySearch.addEventListener('click', () => {
         const iconSearch = document.querySelector('.js-icon-search-header');
         const iconNotSearch = document.querySelector('.js-icon-notsearch');
         const formSearch = document.querySelector('.form-search');
+        const aboveBackground = document.querySelector('.above-background-search');
         iconSearch.setAttribute('style', 'opacity: 0');
         iconNotSearch.setAttribute('style', 'opacity: 1');
         formSearch.setAttribute('style', 'visibility: visible; opacity: 1');
+        aboveBackground.setAttribute('style', 'opacity: .1');
         isSearch = false;
     }
     else {
         const iconSearch = document.querySelector('.js-icon-search-header');
         const iconNotSearch = document.querySelector('.js-icon-notsearch');
         const formSearch = document.querySelector('.form-search');
+        const aboveBackground = document.querySelector('.above-background-search');
         iconSearch.setAttribute('style', 'opacity: 1');
         iconNotSearch.setAttribute('style', 'opacity: 0');
         formSearch.setAttribute('style', 'visibility: hidden; opacity: 0');
+        aboveBackground.setAttribute('style', 'opacity: .0');
         isSearch = true;
     }
 })
