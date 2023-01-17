@@ -44,6 +44,7 @@ body {
     top: 0;
     z-index: 12;
     display: none;
+    overflow: hidden;
 }
 .nav-tablet-top .fa-bars {
     font-size: 2rem;
@@ -159,6 +160,7 @@ body {
     font-family: barcaLight;
     color: white;
 }
+/* over-flow not working */
 .panel-nav-mobile-second {
     position: absolute;
     top: 0;
@@ -169,11 +171,11 @@ body {
     height: 97%;
     width: 50%;
     background: linear-gradient(rgb(205, 18, 45) 0px, rgb(21, 66, 132));
-    overflow: hidden;
+    overflow: scroll;
 }
 .nav-mobile-second ul li{
     transform: translateX(200%);
-    transition: transform 300ms ease-in-out;
+    transition: transform 300ms ease-in-out, ;
 }
 .nav-mobile-second.active ul li{
     transform: translateX(0);
@@ -185,10 +187,8 @@ body {
     right: 0;
     width: 100%;
     height: calc(100% - 20px);
-    /* display: flex;
-    align-items: center;
-    overflow-y: scroll; */
-    overflow-y: scroll;
+    overflow-y: scroll !important;
+    overflow-x: hidden;
 }
 .nav-mobile-second ul {
     /* border-top-left-radius: 12px;
@@ -338,7 +338,7 @@ body {
     height: 100%;
     background-color: white;
     display: flex;
-    transform: translateX(100%) scale(0);
+    transform: translateX(100%);
     transform-origin: right;
     transition: all 300ms ease-in-out;
 }
@@ -581,8 +581,80 @@ body {
     transition: opacity 400ms;
     transition-timing-function: ease-in-out;
 }
-.about {
+.barca-sites {
     font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+.barca-sites .fa-xmark {
+    position: absolute;
+    right: 0;
+    margin-right: 12px;
+    font-size: 2rem;
+    opacity: 0;
+    transform: rotateY(0);
+    transform-origin: center;
+    transition: opacity 400ms ease-in-out, transform 200ms ease-in-out;
+}
+.barca-sites svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: white;
+    margin-left: .5rem;
+    transition: opacity 400ms ease-in-out;
+}
+.barca-sites-options {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(0deg,#154284 0,#181733);
+    z-index: -1;
+    transform: translateX(100%);
+    transition: transform 300ms ease-in-out;
+    overflow-y: scroll;
+}
+.barca-sites-options ul {
+    list-style: none;
+    width: 100%;
+    margin-top: 50px;
+}
+.barca-sites-options ul li {
+    width: 95%;
+    height: 100px;
+    float: right;
+    border-bottom: solid 1px hsla(0,0%,100%,.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.barca-sites-options ul li span {
+    margin-left: 50px;
+    position: relative;
+    width: 100%;
+}
+.barca-sites-options ul li span h3 {
+    font-family: baracBold;
+}
+.barca-sites-options ul li span p {
+    font-family: barcalight;
+    font-size: 1rem;
+    color: hsla(0,0%,100%,.5);
+    line-height: 1.6rem;
+}
+.barca-sites-options ul li span .node {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: rgb(207	17	46	);
+    position: absolute;
+    top: 10%;
+    left: -15%;
 }
 .fa-caret-down, .fa-arrow-up-right-from-square{
     margin-left: 5px;

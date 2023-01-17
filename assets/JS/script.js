@@ -38,7 +38,26 @@ inputSearch.addEventListener('keyup', () => {
 const btnCuler = document.querySelector('.culer');
 btnCuler.addEventListener('click', () => {
     const userOptions = document.querySelector('.user-options');
-    userOptions.setAttribute('style', 'transform: translateX(0) scale(1); ')
+    userOptions.setAttribute('style', 'transform: translateX(0); ')
+})
+let isBarcaSitesActive = false;
+const btnBarcaSites = document.querySelector('.barca-sites');
+btnBarcaSites.addEventListener('click', () => {
+    const barcaSiteOptions = document.querySelector('.barca-sites-options');
+    const closeIcon = document.querySelector('.barca-sites').querySelector('i');
+    const barcaIcon = document.querySelector('.barca-sites').querySelector('svg');
+    if(isBarcaSitesActive == false) {
+        barcaSiteOptions.setAttribute('style', 'transform: translateX(0)');
+        closeIcon.setAttribute('style', 'opacity: 1; transform: rotateY(180deg);');
+        barcaIcon.setAttribute('style', 'opacity: 0');
+        isBarcaSitesActive = true;
+    }
+    else {
+        barcaSiteOptions.setAttribute('style', 'transform: translateX(100%)');
+        closeIcon.setAttribute('style', 'opacity: 0; transform: rotateY(0);');
+        barcaIcon.setAttribute('style', 'opacity: 1');
+        isBarcaSitesActive = false;
+    }
 })
 const btnExitUserOption = document.querySelector('.btn-exit-user-options');
 btnExitUserOption.addEventListener('click', () => {
@@ -218,9 +237,9 @@ const buttonBarcaSocial = document.querySelector('.js-barca-on-social');
 buttonBarcaSocial.addEventListener('click', () => {
     const panel = document.querySelector('.panel-nav-mobile-second');
     panel.setAttribute('style', 'background: #154284');
-    butttonActive = document.querySelector('.nav-mobile-first-top-choose');
-    butttonActive.classList.remove('nav-mobile-first-top-choose');
-    buttonBarcaSocial.classList.add('nav-mobile-first-top-choose');
+    // butttonActive = document.querySelector('.nav-mobile-first-top-choose');
+    // butttonActive.classList.remove('nav-mobile-first-top-choose');
+    // buttonBarcaSocial.classList.add('nav-mobile-first-top-choose');
     const navMobileSecondActive = document.querySelector('.nav-mobile-second.active')
     navMobileSecondActive.classList.remove("active");
     navMobileSecondActive.classList.add("hidden");
@@ -238,9 +257,9 @@ const buttonAllBarcaSites = document.querySelector('.js-all-barca-sites');
 buttonAllBarcaSites.addEventListener('click', () => {
     const panel = document.querySelector('.panel-nav-mobile-second');
     panel.setAttribute('style', 'background: #154284');
-    butttonActive = document.querySelector('.nav-mobile-first-top-choose');
-    butttonActive.classList.remove('nav-mobile-first-top-choose');
-    buttonAllBarcaSites.classList.add('nav-mobile-first-top-choose');
+    // butttonActive = document.querySelector('.nav-mobile-first-top-choose');
+    // butttonActive.classList.remove('nav-mobile-first-top-choose');
+    // buttonAllBarcaSites.classList.add('nav-mobile-first-top-choose');
     const navMobileSecondActive = document.querySelector('.nav-mobile-second.active')
     navMobileSecondActive.classList.remove("active");
     navMobileSecondActive.classList.add("hidden");
