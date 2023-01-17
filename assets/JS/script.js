@@ -69,3 +69,188 @@ btnExitLanguageOptions.addEventListener('click', () => {
     const navMobileFirst = document.querySelector('.nav-mobile-first');
     navMobileFirst.setAttribute('style', 'transform: translateY(0)');
 })
+
+//Not working
+// function navMobileFirstControlling (buttonNavMobileFirst, classMoblieSecondActive){
+//     console.log(buttonNavMobileFirst);
+//     console.log(classMoblieSecondActive);
+//     butttonActive = document.querySelector('.nav-mobile-first-top-choose');
+//     butttonActive.classList.remove('nav-mobile-first-top-choose');
+//     buttonNavMobileFirst.classList.add('nav-mobile-first-top-choose');
+//     const navMobileSecondActive = document.querySelector('.nav-mobile-second.active')
+//     navMobileSecondActive.classList.remove("active");
+//     navMobileSecondActive.classList.add("hidden");
+//     const navMobileSecondFocus =  document.querySelector(classMoblieSecondActive);
+//     navMobileSecondFocus.classList.remove("hidden");
+//     navMobileSecondFocus.classList.add("active");
+//     const listLiActive = navMobileSecondFocus.querySelectorAll('li');
+//     let delay = 100;
+//     listLiActive.forEach((item) => {
+//         item.setAttribute('style', `transition-delay: ${delay}ms`);
+//         delay +=100;
+//     })
+// }
+
+const homeButton = document.querySelector('.js-home-logo');
+homeButton.addEventListener('click', () => {
+    const panel = document.querySelector('.panel-nav-mobile-second');
+    panel.setAttribute('style', 'background: linear-gradient(rgb(205, 18, 45) 0px, rgb(21, 66, 132));');
+    butttonActive = document.querySelector('.nav-mobile-first-top-choose');
+    butttonActive.classList.remove('nav-mobile-first-top-choose');
+    homeButton.classList.add('nav-mobile-first-top-choose');
+    const navMobileSecondActive = document.querySelector('.nav-mobile-second.active')
+    navMobileSecondActive.classList.remove("active");
+    navMobileSecondActive.classList.add("hidden");
+    const navMobileSecondFocus =  document.querySelector('.nav-mobile-second-dont-miss');
+    navMobileSecondFocus.classList.remove("hidden");
+    navMobileSecondFocus.classList.add("active");
+    const listLiActive = navMobileSecondFocus.querySelectorAll('li');
+    let delay = 100;
+    listLiActive.forEach((item) => {
+        item.setAttribute('style', `transition-delay: ${delay}ms`);
+        delay +=100;
+    })
+})
+const firstTeamButton = document.querySelector('.js-first-team');
+firstTeamButton.addEventListener('click', () => {
+    const panel = document.querySelector('.panel-nav-mobile-second');
+    panel.setAttribute('style', 'background: linear-gradient(rgb(205, 18, 45) 0px, rgb(21, 66, 132));');
+    butttonActive = document.querySelector('.nav-mobile-first-top-choose');
+    butttonActive.classList.remove('nav-mobile-first-top-choose');
+    firstTeamButton.classList.add('nav-mobile-first-top-choose');
+    console.log(firstTeamButton.classList);
+    const navMobileSecondActive = document.querySelector('.nav-mobile-second.active')
+    navMobileSecondActive.classList.remove("active");
+    navMobileSecondActive.classList.add("hidden");
+    const navMobileSecondFocus =  document.querySelector('.nav-mobile-second-first-team');
+    navMobileSecondFocus.classList.remove("hidden");
+    navMobileSecondFocus.classList.add("active");
+    const listLiActive = navMobileSecondFocus.querySelectorAll('li');
+    let delay = 100;
+    listLiActive.forEach((item) => {
+        item.setAttribute('style', `transition-delay: ${delay}ms`);
+        delay +=100;
+    })
+})
+
+const buttonTicketAndMuseum = document.querySelector('.js-ticket-museum');
+buttonTicketAndMuseum.addEventListener('click', () => {
+    const panel = document.querySelector('.panel-nav-mobile-second');
+    panel.setAttribute('style', 'background: linear-gradient(rgb(205, 18, 45) 0px, rgb(21, 66, 132));');
+    butttonActive = document.querySelector('.nav-mobile-first-top-choose');
+    butttonActive.classList.remove('nav-mobile-first-top-choose');
+    buttonTicketAndMuseum.classList.add('nav-mobile-first-top-choose');
+    const navMobileSecondActive = document.querySelector('.nav-mobile-second.active')
+    navMobileSecondActive.classList.remove("active");
+    navMobileSecondActive.classList.add("hidden");
+    const navMobileSecondFocus =  document.querySelector('.nav-mobile-second-tickets-museum');
+    navMobileSecondFocus.classList.remove("hidden");
+    navMobileSecondFocus.classList.add("active");
+    const listLiActive = navMobileSecondFocus.querySelectorAll('li');
+    let delay = 100;
+    listLiActive.forEach((item) => {
+        item.setAttribute('style', `transition-delay: ${delay}ms`);
+        delay +=100;
+    })
+})
+
+const buttonBarcaTV = document.querySelector('.js-barca-TV');
+buttonBarcaTV.addEventListener('click', () => {
+    const panel = document.querySelector('.panel-nav-mobile-second');
+    panel.setAttribute('style', 'background: linear-gradient(rgb(205, 18, 45) 0px, rgb(21, 66, 132));');
+    butttonActive = document.querySelector('.nav-mobile-first-top-choose');
+    butttonActive.classList.remove('nav-mobile-first-top-choose');
+    buttonBarcaTV.classList.add('nav-mobile-first-top-choose');
+    const navMobileSecondActive = document.querySelector('.nav-mobile-second.active')
+    navMobileSecondActive.classList.remove("active");
+    navMobileSecondActive.classList.add("hidden");
+    const navMobileSecondFocus =  document.querySelector('.nav-mobile-second-barcaTV');
+    navMobileSecondFocus.classList.remove("hidden");
+    navMobileSecondFocus.classList.add("active");
+    const listLiActive = navMobileSecondFocus.querySelectorAll('li');
+    let delay = 100;
+    listLiActive.forEach((item) => {
+        item.setAttribute('style', `transition-delay: ${delay}ms`);
+        delay +=100;
+    })
+})
+const buttonClub = document.querySelector('.js-club');
+buttonClub.addEventListener('click', () => {
+    const panel = document.querySelector('.panel-nav-mobile-second');
+    panel.setAttribute('style', 'background: linear-gradient(rgb(205, 18, 45) 0px, rgb(21, 66, 132));');
+    butttonActive = document.querySelector('.nav-mobile-first-top-choose');
+    butttonActive.classList.remove('nav-mobile-first-top-choose');
+    buttonClub.classList.add('nav-mobile-first-top-choose');
+    const navMobileSecondActive = document.querySelector('.nav-mobile-second.active')
+    navMobileSecondActive.classList.remove("active");
+    navMobileSecondActive.classList.add("hidden");
+    const navMobileSecondFocus =  document.querySelector('.nav-mobile-second-club');
+    navMobileSecondFocus.classList.remove("hidden");
+    navMobileSecondFocus.classList.add("active");
+    const listLiActive = navMobileSecondFocus.querySelectorAll('li');
+    let delay = 100;
+    listLiActive.forEach((item) => {
+        item.setAttribute('style', `transition-delay: ${delay}ms`);
+        delay +=100;
+    })
+})
+const buttonBarcaTeams = document.querySelector('.js-barca-teams');
+buttonBarcaTeams.addEventListener('click', () => {
+    const panel = document.querySelector('.panel-nav-mobile-second');
+    panel.setAttribute('style', 'background: linear-gradient(rgb(205, 18, 45) 0px, rgb(21, 66, 132));');
+    butttonActive = document.querySelector('.nav-mobile-first-top-choose');
+    butttonActive.classList.remove('nav-mobile-first-top-choose');
+    buttonBarcaTeams.classList.add('nav-mobile-first-top-choose');
+    const navMobileSecondActive = document.querySelector('.nav-mobile-second.active')
+    navMobileSecondActive.classList.remove("active");
+    navMobileSecondActive.classList.add("hidden");
+    const navMobileSecondFocus =  document.querySelector('.nav-mobile-second-barca-team');
+    navMobileSecondFocus.classList.remove("hidden");
+    navMobileSecondFocus.classList.add("active");
+    const listLiActive = navMobileSecondFocus.querySelectorAll('li');
+    let delay = 100;
+    listLiActive.forEach((item) => {
+        item.setAttribute('style', `transition-delay: ${delay}ms`);
+        delay +=100;
+    })
+})
+const buttonBarcaSocial = document.querySelector('.js-barca-on-social');
+buttonBarcaSocial.addEventListener('click', () => {
+    const panel = document.querySelector('.panel-nav-mobile-second');
+    panel.setAttribute('style', 'background: #154284');
+    butttonActive = document.querySelector('.nav-mobile-first-top-choose');
+    butttonActive.classList.remove('nav-mobile-first-top-choose');
+    buttonBarcaSocial.classList.add('nav-mobile-first-top-choose');
+    const navMobileSecondActive = document.querySelector('.nav-mobile-second.active')
+    navMobileSecondActive.classList.remove("active");
+    navMobileSecondActive.classList.add("hidden");
+    const navMobileSecondFocus =  document.querySelector('.nav-mobile-second-barca-on-social');
+    navMobileSecondFocus.classList.remove("hidden");
+    navMobileSecondFocus.classList.add("active");
+    const listLiActive = navMobileSecondFocus.querySelectorAll('li');
+    let delay = 100;
+    listLiActive.forEach((item) => {
+        item.setAttribute('style', `transition-delay: ${delay}ms`);
+        delay +=100;
+    })
+})
+const buttonAllBarcaSites = document.querySelector('.js-all-barca-sites');
+buttonAllBarcaSites.addEventListener('click', () => {
+    const panel = document.querySelector('.panel-nav-mobile-second');
+    panel.setAttribute('style', 'background: #154284');
+    butttonActive = document.querySelector('.nav-mobile-first-top-choose');
+    butttonActive.classList.remove('nav-mobile-first-top-choose');
+    buttonAllBarcaSites.classList.add('nav-mobile-first-top-choose');
+    const navMobileSecondActive = document.querySelector('.nav-mobile-second.active')
+    navMobileSecondActive.classList.remove("active");
+    navMobileSecondActive.classList.add("hidden");
+    const navMobileSecondFocus =  document.querySelector('.nav-mobile-second-all-barca-sites');
+    navMobileSecondFocus.classList.remove("hidden");
+    navMobileSecondFocus.classList.add("active");
+    const listLiActive = navMobileSecondFocus.querySelectorAll('li');
+    let delay = 100;
+    listLiActive.forEach((item) => {
+        item.setAttribute('style', `transition-delay: ${delay}ms`);
+        delay +=100;
+    })
+})
